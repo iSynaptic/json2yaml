@@ -1,6 +1,6 @@
 Description
 ===================
-yaml2json 
+json2yaml - Fork of yaml2json by bronze1man to go the "other" direction
 
 Feature
 ====================
@@ -12,11 +12,11 @@ Usage
 ====================
 ### shell
 * find the build of you platform
-* run `echo "a: 1" | yaml2json` to see result
+* run `echo '{"a": 1}' | json2yaml` to see result
 
 ### read from file save to file
 ```
-cat 1.yml | yaml2json > 2.json
+cat 1.json | json2yaml > 2.yml
 ```
 
 Notice
@@ -27,4 +27,5 @@ Notice
 
 Reference
 ====================
+https://github.com/bronze1man/yaml2json
 https://github.com/peter-edge/go-yaml2json

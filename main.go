@@ -26,7 +26,7 @@ func translate(in io.Reader, out io.Writer) error {
 		return err
 	}
 	var data interface{}
-	err = goyaml.Unmarshal(input, &data)
+	err = json.Unmarshal(input, &data)
 	if err != nil {
 		return err
 	}
@@ -36,7 +36,7 @@ func translate(in io.Reader, out io.Writer) error {
 		return err
 	}
 
-	output, err := json.Marshal(data)
+	output, err := goyaml.Marshal(data)
 	if err != nil {
 		return err
 	}
